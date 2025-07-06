@@ -26,8 +26,8 @@ public class Hospital {
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "hospital_patient",
-            joinColumns = @JoinColumn(name = "patient_id"),
-            inverseJoinColumns = @JoinColumn(name = "hospital_id")
+            joinColumns = @JoinColumn(name = "hospital_id"),
+            inverseJoinColumns = @JoinColumn(name = "patient_id")
     )
     private Set<Patient>  patients = new HashSet<Patient>();
 
